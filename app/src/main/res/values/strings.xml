@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+    <string name="android_sudoku">Android Sudoku</string>
+    <string name="continue_label">Continue</string>
+    <string name="new_game">New Game</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="about_title">About Android Sudoku</string>
+    <string name="about_text">\
+        Soduku is logic - base number placement puzzle.
+        Start with 9 x 9 grid with 3 x 3 boxes (Also call <i>blocks</i>) contains the digits
+        1 to 9 exactly game.
+    </string>
+</resources>
