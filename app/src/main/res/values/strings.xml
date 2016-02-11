@@ -8,10 +8,11 @@
     <string name="about_title">About Android Sudoku</string>
     <string name="about_text">\
         Soduku is logic - base number placement puzzle.
-        Start with 9 x 9 grid with 3 x 3 boxes (Also call <i>blocks</i>) contains the digits
+        Start with 9 x 9 grid with 3 x 3 boxes
+        (Also call <i>blocks</i>) contains the digits
         1 to 9 exactly game.</string>
     <string name="settings_label">Settings...</string>
-    <string name="settings_title">Sudoku settings</string>
+    <string name="settings_title">Sudoku Settings</string>
     <string name="settings_shortcut">s</string>
     <string name="music_title">Music</string>
     <string name="music_summary">Play background music</string>
