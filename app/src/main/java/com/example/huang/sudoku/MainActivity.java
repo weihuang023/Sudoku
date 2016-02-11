@@ -1,5 +1,8 @@
 package com.example.huang.sudoku;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -29,11 +32,34 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.button2:
+                openNewGameDialog();
+                break;
             case R.id.button3:
-                Intent i = new Intent(this,About.class);
-                startActivity(i);
+                Intent i3 = new Intent(this,About.class);
+                startActivity(i3);
+                break;
+            case R.id.button4:
+                finish();
                 break;
         }
+    }
+
+    private static final String TAG = "Sudoku";
+
+    private void openNewGameDialog(){
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.new_game_title)
+                .setItems(R.array.difficulty,new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialogInterface, int i){
+                startGame(i);
+            }
+        }).show();
+    }
+
+    private void startGame(int i){
+        Log.d(TAG," Click on " + i);
+        //Start Game here ...
     }
 
     @Override
