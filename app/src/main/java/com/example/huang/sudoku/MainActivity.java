@@ -51,5 +51,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             startActivity(new Intent(this, Prefs.class));
             return true;
         }
-        return false; }
+        return false;
+    }
 }
