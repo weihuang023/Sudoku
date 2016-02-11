@@ -1,4 +1,4 @@
-<?xml version="1.0" encodeing="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="difficulty">
         <item>@string/easy_label</item>

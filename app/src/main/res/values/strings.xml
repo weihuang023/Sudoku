@@ -11,7 +11,7 @@
         Start with 9 x 9 grid with 3 x 3 boxes
         (Also call <i>blocks</i>) contains the digits
         1 to 9 exactly game.</string>
-    <string name="settings_label">Settings...</string>
+    <string name="settings_label">Settings</string>
     <string name="settings_title">Sudoku Settings</string>
     <string name="settings_shortcut">s</string>
     <string name="music_title">Music</string>
