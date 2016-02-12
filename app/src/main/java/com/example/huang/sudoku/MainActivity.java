@@ -60,8 +60,12 @@ public class MainActivity extends Activity implements OnClickListener {
     private void startGame(int i){
         Log.d(TAG," Click on " + i);
         //Start Game here ...
+        Intent intent = new Intent(MainActivity.this,Game.class);
+        intent.putExtra(Game.KEY_DIFFICULTY,i);
+        startActivity(intent);
     }
 
+    // Setting Menu and MenuInflater
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -70,6 +74,8 @@ public class MainActivity extends Activity implements OnClickListener {
         return true;
     }
 
+    // Setting Item
+    // Intent in Prefs.Class
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

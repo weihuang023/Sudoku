@@ -7,7 +7,7 @@
     <string name="exit">Exit</string>
     <string name="about_title">About Android Sudoku</string>
     <string name="about_text">\
-        Soduku is logic - base number placement puzzle.
+        Sudoku is logic - base number placement puzzle.
         Start with 9 x 9 grid with 3 x 3 boxes
         (Also call <i>blocks</i>) contains the digits
         1 to 9 exactly game.</string>
