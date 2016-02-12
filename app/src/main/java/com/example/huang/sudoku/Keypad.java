@@ -3,6 +3,7 @@ package com.example.huang.sudoku;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
@@ -37,7 +38,7 @@ public class Keypad extends Dialog {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        int tile = 0;
+        int tile;
         switch (keyCode) {
             case KeyEvent.KEYCODE_0:
             case KeyEvent.KEYCODE_SPACE: tile = 0; break;
@@ -61,6 +62,7 @@ public class Keypad extends Dialog {
 
     /** Return the chosen tile to the caller */
     private void returnResult(int tile) {
+        Log.d(TAG,"Return the chose tile "+tile+" to caller ");
         puzzleView.setSelectedTile(tile);
         dismiss();
     }

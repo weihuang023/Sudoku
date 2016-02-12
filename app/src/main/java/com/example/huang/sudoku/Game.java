@@ -17,15 +17,15 @@ public class Game extends Activity {
 
     private int puzzle[];
 
-    private final String easyPuzzle =
+    public final String easyPuzzle =
                     "360000000004230800000004200" +
                     "070460003820000014500013020" +
                     "001900000007048300000000045";
-    private final String mediumPuzzle =
+    public final String mediumPuzzle =
                     "650000070000506000014000005" +
                     "007009000002314700000700800" +
                     "500000630000201000030000097";
-    private final String hardPuzzle =
+    public final String hardPuzzle =
                     "009000000080605020501078000" +
                     "000000700706040102004000000" +
                     "000720903090301080000000600";
@@ -84,12 +84,16 @@ public class Game extends Activity {
 
     /** Return the tile at the given coordinates */
     private int getTile(int x, int y) {
+        Log.d(TAG,"Return the Tile at the give coordinate " +x+ " "+y);
         return puzzle[y * 9 + x];
+
     }
     /** Change the tile at the given coordinates */
 
     private void setTile(int x, int y, int value) {
+
         puzzle[y * 9 + x] = value;
+
     }
 
     /** Return a string for the tile at the given coordinates */
@@ -143,8 +147,7 @@ public class Game extends Activity {
         for (int x = 0; x < 9; x++) {
             for (int y = 0; y < 9; y++) {
                 used[x][y] = calculateUsedTiles(x, y);
-                // Log.d(TAG, "used[" + x + "][" + y + "] = "
-                // + toPuzzleString(used[x][y]));
+                // Log.d(TAG, "used[" + x + "][" + y + "] = " + toPuzzleString(used[x][y]));
             }
         }
     }
