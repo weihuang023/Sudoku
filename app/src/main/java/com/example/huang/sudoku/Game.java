@@ -17,15 +17,15 @@ public class Game extends Activity {
 
     private int puzzle[];
 
-    public final String easyPuzzle =
+    private static final String easyPuzzle =
                     "360000000004230800000004200" +
                     "070460003820000014500013020" +
                     "001900000007048300000000045";
-    public final String mediumPuzzle =
+    private static final String mediumPuzzle =
                     "650000070000506000014000005" +
                     "007009000002314700000700800" +
                     "500000630000201000030000097";
-    public final String hardPuzzle =
+    private static final String hardPuzzle =
                     "009000000080605020501078000" +
                     "000000700706040102004000000" +
                     "000720903090301080000000600";
@@ -123,8 +123,7 @@ public class Game extends Activity {
     protected void showKeypadOrError(int x, int y) {
         int tiles[] = getUsedTiles(x, y);
         if (tiles.length == 9) {
-            Toast toast = Toast.makeText(this,
-                    R.string.no_moves_label, Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this, R.string.no_moves_label, Toast.LENGTH_SHORT);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         } else {
