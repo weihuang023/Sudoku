@@ -32,6 +32,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.button:
+                break;
             case R.id.button2:
                 openNewGameDialog();
                 break;

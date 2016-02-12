@@ -3,9 +3,12 @@
     <words>
       <w>hilite</w>
       <w>movesleft</w>
+      <w>nused</w>
       <w>oldh</w>
       <w>oldw</w>
       <w>soduku</w>
+      <w>startx</w>
+      <w>starty</w>
       <w>sudoku</w>
     </words>
   </dictionary>
