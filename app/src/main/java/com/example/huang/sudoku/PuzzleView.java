@@ -28,7 +28,7 @@ public class PuzzleView extends View {
     Paint light;
     Paint foreground;
     Paint hint;
-    Paint selected = new Paint();
+    Paint selected;
     Rect r;
 
 
