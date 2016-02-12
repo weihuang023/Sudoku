@@ -39,8 +39,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 openNewGameDialog();
                 break;
             case R.id.button3:
-                Intent i3 = new Intent(this,About.class);
-                startActivity(i3);
+                Intent i = new Intent(this,About.class);
+                startActivity(i);
                 break;
             case R.id.button4:
                 finish();
@@ -69,6 +69,7 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     // Setting Menu and MenuInflater
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -79,6 +80,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     // Setting Item
     // Intent in Prefs.Class
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

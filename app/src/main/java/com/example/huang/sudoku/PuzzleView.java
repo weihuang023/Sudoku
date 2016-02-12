@@ -104,7 +104,6 @@ public class PuzzleView extends View {
         }
 
         // Draw the hints...
-
         // Pick a hint color based on #moves left
         hint = new Paint();
         int c[] = {
