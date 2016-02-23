@@ -21,6 +21,6 @@
     <string name="easy_label">Easy</string>
     <string name="medium_label">Medium</string>
     <string name="hard_label">Hard</string>
-    <string name="keypad_title">HINT</string>
+    <string name="keypad_title">KEYPAD</string>
     <string name="no_moves_label">NO MOVES</string>
 </resources>

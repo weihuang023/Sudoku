@@ -10,6 +10,8 @@ import android.widget.Toast;
 public class Game extends Activity {
     private static final String TAG = "Sudoku";
 
+    private static final String PREF_PUZZLE = "puzzle";
+    protected static final int DIFFICULTY_CONTINUE = -1;
     public static final String KEY_DIFFICULTY = "org.example.sudoku.difficulty";
     public static final int DIFFICULTY_EASY = 0;
     public static final int DIFFICULTY_MEDIUM = 1;
@@ -42,6 +44,28 @@ public class Game extends Activity {
         puzzleView = new PuzzleView(this);
         setContentView(puzzleView);
         puzzleView.requestFocus();
+
+        // if the activity is restarted, do a continue next time
+        getIntent().putExtra(KEY_DIFFICULTY,DIFFICULTY_CONTINUE);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Music.play(this, R.raw.centuries);
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d(TAG,"onPause");
+        Music.stop(this);
+
+        getPreferences(MODE_PRIVATE)
+                .edit()
+                .putString(PREF_PUZZLE,toPuzzleString(puzzle))
+                .commit();
+
     }
 
     /** Given a difficulty level, come up with a new puzzle */
@@ -49,6 +73,9 @@ public class Game extends Activity {
         String puz;
         // TODO: Continue Last Game
         switch (diff) {
+            case DIFFICULTY_CONTINUE:
+                puz = getPreferences(MODE_PRIVATE).getString(PREF_PUZZLE,easyPuzzle);
+                break;
             case DIFFICULTY_HARD:
                 puz = hardPuzzle;
                 break;

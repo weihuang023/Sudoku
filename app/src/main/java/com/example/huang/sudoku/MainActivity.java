@@ -30,10 +30,23 @@ public class MainActivity extends Activity implements OnClickListener {
         exitButton.setOnClickListener(this);
     }
 
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Music.play(this, R.raw.centuries);
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Music.stop(this);
+
+    }
+
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button:
-                Log.d(TAG,"DOES NOT WORK");
+                startGame(Game.DIFFICULTY_CONTINUE);
                 break;
             case R.id.button2:
                 openNewGameDialog();
@@ -45,6 +58,8 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.button4:
                 finish();
                 break;
+            // More Button go there if any..
+
         }
     }
 
@@ -87,6 +102,8 @@ public class MainActivity extends Activity implements OnClickListener {
             case R.id.settings:
                 startActivity(new Intent(this, Prefs.class));
                 return true;
+
+            // More Items got here If any
         }
         return false;
     }

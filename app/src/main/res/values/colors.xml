@@ -9,8 +9,8 @@
     <color name="puzzle_light">#64eae2e2</color>
     <color name="puzzle_dark">#f704012b</color>
     <color name="puzzle_foreground">#772d99</color>
-    <color name="puzzle_hint_0">#00045118</color>
-    <color name="puzzle_hint_1">#003d9669</color>
-    <color name="puzzle_hint_2">#00cde7d2</color>
+    <color name="puzzle_hint_0">#eb045118</color>
+    <color name="puzzle_hint_1">#2b633a</color>
+    <color name="puzzle_hint_2">#3d9669</color>
     <color name="puzzle_selected">#00fbfcfb</color>
 </resources>
